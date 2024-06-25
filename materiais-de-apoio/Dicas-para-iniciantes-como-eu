@@ -1,0 +1,86 @@
+Olá, em chamo Victor Hugo Felício sou completamente iniciante aqui porém sendo um iniciante decidi fazer aqui um "mini-guia" de códigos básicos para se usar no GitHub 
+e no GitBash (Meu conhecimento é praticamene 5% em git ok? porém vou tentar cria uma lista para ajudar os mais novos que nem eu a se mapearem) 
+ Começando: 
+1- Configuração inicial:
+*git config --global user.name "Seu Nome"
+Este comando define o nome de usuario que sera associado aos commits que você fizer. O comando "global" faz com que essa configuração se aplique a todos os repositórios 
+Git do seu usuário no sistema*
+
+1.2- Configurar email:
+*git config --global user.mail "seu.email@exemplo.com"
+Seguindo o mesmo esquema do comando anterior esse coamndo define o email associado aos seus commits. O email é usado para identificar o autor das alterações.*
+---------//-----------
+2- Criação e clonagem de repositórios:
+*git init
+Este comando cria um novo repositório Git no diretório atual. Ele inicializa um diretório '.git' que contém todos os arquivos necessário para o controle de versão.
+
+2.1- Clonar um repositório
+*git clone <url-do-repositorio>
+Clona um repositório remoto (Geralmente hospedado no GitHub, GitLab) para o seu computador. O clone sera uma cópia completa do repositório original.*
+---------//-----------
+3- Comandos de status e log
+*git status
+Verifica o status do repositório, incluindo arquivos que foram modificados ou que ainda não foram monitorados pelo Git.*
+
+3.1- Ver histórico de commits 
+*git log
+Exibe o histórico de commits do repositório. Cada commit mostra um autor, data e uma mensagem de commit.*
+---------//-----------
+4- Adicionar e comprometer alterações
+*git add <nome-do-arquivo>
+Adiciona um arquivo específico á área de "estágio", o preparando para o commit. A área de estágio é onde você monta os arquivos que farão parte do próximo commit.*
+
+4.1- Adicionar todos os arquivos modificados ao estágio
+*git add .
+Adiciona todos os arquivos modificados e novos a área de estágio. O ponto(.) representa o diretório atual e todos os seus subdiretórios.*
+
+4.2- Fazer um commit das alterações
+*git commit -m "Mensagem do commit"
+Cria um novo commit com as mudanças que estão na área e estágio. A opção '-m' permite adicionar a uma mensagem descritiva ao commit.*
+---------//-----------
+5- Trabalhando com branches(Ramificações)
+*git branch
+Lista todas as branches no repositório e indica a branch atual com um asterisco (*).
+
+5.1- Criar uma nova branch
+*git branch <nome-da-branch>
+Cria uma nova branch com o nome especificado. A nova branch será baseada na branch atual.
+
+5.2- Mudar para uma branch existente
+*git checkout <nome-da-branch>
+Muda a branch atual para a branch especificada. Seu diretório de trabalho será atualizado para refletir o estado da nova branch.*
+
+5.3- Criar e mudar para uma nova branch
+*git chekout -b <nome-da-branch>
+Combina a criação e a mudança de branch em um único comando. Cria uma nova branch e imediatamente muda pra ela.*
+---------//-----------
+6- Atualizando e mesclando branches
+*git pull
+Puxa alterações do repositório remoto, atualiza o repositório com as mudanças no repositório remoto. Este comando faz um fetch(busca as alterações) e um merge (mescla
+as alterações) em um único passo.*
+
+6.1- Empurrando alterações para o repositório remoto
+*git push
+Envia os commits da branch local para o repositório remoto. Você geralmente precisa ter permissões de escrita no repositório remoto para usar este comando.*
+
+6.2- Mesclar uma branch com a branch atual
+*git merge <nome-da-branch>
+Mescla a branch especificada com a branch atual. As alterações feitas na branch especificada serão aplicadas na branch atual.*
+---------//-----------
+7- Comandos adicionais úteis 
+*git diff
+Mostra as diferenças entre o diretório de trabalho e a área de estágio. Você pode ver quais mudanças foram feitas antes de adicioná-las ao estágio ou fazer um commit.*
+
+7.1- Descartar mudanças em um arquivo
+*git checkout -- <nome-do-arquivo>
+Descartas mudanças não commitadas em um arquivo, revertendo-o para o estado do ultimo commit ou da área de estágio.*
+
+7.2- Remover um arquivo do controle de versão
+*git rm <nome-do-arquivo>
+Remove um arquivo do repositório Git e do seu dirtório de trabalho. Para confirmar a remoção, é necessário fazer um commit após este comando.*
+
+Bom foi uma forte base de pesquisa para mim conhecer esses códigos e resumi-los aqui. Espero que te ajude iniciante ou até mesmo mais experiente na hora de que 
+se perder na hora de preparar um projeto
+                        -Victor Hugo Felício
+
+
